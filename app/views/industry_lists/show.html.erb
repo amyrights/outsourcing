@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @industry_list.name %>
+</p>
+
+<p>
+  <strong>Parent:</strong>
+  <%= @industry_list.parent_id %>
+</p>
+
+<p>
+  <strong>Pics:</strong>
+  <%= @industry_list.pics %>
+</p>
+
+<p>
+  <strong>Url slug:</strong>
+  <%= @industry_list.url_slug %>
+</p>
+
+<p>
+  <strong>Tree print:</strong>
+  <%= @industry_list.tree_print %>
+</p>
+
+<p>
+  <strong>Search visible:</strong>
+  <%= @industry_list.search_visible %>
+</p>
+
+<p>
+  <strong>Child count:</strong>
+  <%= @industry_list.child_count %>
+</p>
+
+<p>
+  <strong>Index hierarchy data:</strong>
+  <%= @industry_list.index_hierarchy_data %>
+</p>
+
+<%= link_to 'Edit', edit_industry_list_path(@industry_list) %> |
+<%= link_to 'Back', industry_lists_path %>

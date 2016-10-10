@@ -1,0 +1,2 @@
+json.extract! industry_list, :id, :name, :parent_id, :pics, :url_slug, :tree_print, :search_visible, :child_count, :index_hierarchy_data, :created_at, :updated_at
+json.url industry_list_url(industry_list, format: :json)

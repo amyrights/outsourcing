@@ -1,0 +1,2 @@
+json.extract! company_profile, :id, :headquarters_country_code, :headquarters_state_code, :headquarters_city, :website, :twitter, :linkedin, :facebook, :summary, :created_at, :updated_at
+json.url company_profile_url(company_profile, format: :json)

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company profile:</strong>
+  <%= @company_industry.company_profile_id %>
+</p>
+
+<p>
+  <strong>Industry list:</strong>
+  <%= @company_industry.industry_list_id %>
+</p>
+
+<p>
+  <strong>Sort order:</strong>
+  <%= @company_industry.sort_order %>
+</p>
+
+<%= link_to 'Edit', edit_company_industry_path(@company_industry) %> |
+<%= link_to 'Back', company_industries_path %>

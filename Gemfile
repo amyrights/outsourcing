@@ -42,3 +42,15 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+#environment variables
+gem 'dotenv-rails', :groups => [:development, :test]
+
+#papertrail to follow changes in data
+gem 'paper_trail'
+
+#devise
+gem 'devise'
+
+#postgres
+gem 'pg' 

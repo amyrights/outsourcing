@@ -1,0 +1,1 @@
+json.partial! "industry_lists/industry_list", industry_list: @industry_list

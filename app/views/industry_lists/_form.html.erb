@@ -1,0 +1,57 @@
+<%= form_for(industry_list) do |f| %>
+  <% if industry_list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(industry_list.errors.count, "error") %> prohibited this industry_list from being saved:</h2>
+
+      <ul>
+      <% industry_list.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :parent_id %>
+    <%= f.text_field :parent_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pics %>
+    <%= f.number_field :pics %>
+  </div>
+
+  <div class="field">
+    <%= f.label :url_slug %>
+    <%= f.number_field :url_slug %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tree_print %>
+    <%= f.text_field :tree_print %>
+  </div>
+
+  <div class="field">
+    <%= f.label :search_visible %>
+    <%= f.text_field :search_visible %>
+  </div>
+
+  <div class="field">
+    <%= f.label :child_count %>
+    <%= f.number_field :child_count %>
+  </div>
+
+  <div class="field">
+    <%= f.label :index_hierarchy_data %>
+    <%= f.text_field :index_hierarchy_data %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

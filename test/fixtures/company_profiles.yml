@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  headquarters_country_code: MyString
+  headquarters_state_code: MyString
+  headquarters_city: MyString
+  website: MyString
+  twitter: MyString
+  linkedin: MyString
+  facebook: MyString
+  summary: MyString
+
+two:
+  headquarters_country_code: MyString
+  headquarters_state_code: MyString
+  headquarters_city: MyString
+  website: MyString
+  twitter: MyString
+  linkedin: MyString
+  facebook: MyString
+  summary: MyString

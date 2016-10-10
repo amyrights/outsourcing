@@ -1,0 +1,1 @@
+json.array! @industry_lists, partial: 'industry_lists/industry_list', as: :industry_list

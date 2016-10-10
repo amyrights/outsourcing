@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Company Industries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company profile</th>
+      <th>Industry list</th>
+      <th>Sort order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @company_industries.each do |company_industry| %>
+      <tr>
+        <td><%= company_industry.company_profile_id %></td>
+        <td><%= company_industry.industry_list_id %></td>
+        <td><%= company_industry.sort_order %></td>
+        <td><%= link_to 'Show', company_industry %></td>
+        <td><%= link_to 'Edit', edit_company_industry_path(company_industry) %></td>
+        <td><%= link_to 'Destroy', company_industry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Company Industry', new_company_industry_path %>

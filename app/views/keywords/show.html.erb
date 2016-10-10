@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company profile:</strong>
+  <%= @keyword.company_profile_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @keyword.name %>
+</p>
+
+<p>
+  <strong>Sort order:</strong>
+  <%= @keyword.sort_order %>
+</p>
+
+<%= link_to 'Edit', edit_keyword_path(@keyword) %> |
+<%= link_to 'Back', keywords_path %>

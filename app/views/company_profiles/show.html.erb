@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Headquarters country code:</strong>
+  <%= @company_profile.headquarters_country_code %>
+</p>
+
+<p>
+  <strong>Headquarters state code:</strong>
+  <%= @company_profile.headquarters_state_code %>
+</p>
+
+<p>
+  <strong>Headquarters city:</strong>
+  <%= @company_profile.headquarters_city %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @company_profile.website %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @company_profile.twitter %>
+</p>
+
+<p>
+  <strong>Linkedin:</strong>
+  <%= @company_profile.linkedin %>
+</p>
+
+<p>
+  <strong>Facebook:</strong>
+  <%= @company_profile.facebook %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @company_profile.summary %>
+</p>
+
+<%= link_to 'Edit', edit_company_profile_path(@company_profile) %> |
+<%= link_to 'Back', company_profiles_path %>

@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Industry Lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Parent</th>
+      <th>Pics</th>
+      <th>Url slug</th>
+      <th>Tree print</th>
+      <th>Search visible</th>
+      <th>Child count</th>
+      <th>Index hierarchy data</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @industry_lists.each do |industry_list| %>
+      <tr>
+        <td><%= industry_list.name %></td>
+        <td><%= industry_list.parent_id %></td>
+        <td><%= industry_list.pics %></td>
+        <td><%= industry_list.url_slug %></td>
+        <td><%= industry_list.tree_print %></td>
+        <td><%= industry_list.search_visible %></td>
+        <td><%= industry_list.child_count %></td>
+        <td><%= industry_list.index_hierarchy_data %></td>
+        <td><%= link_to 'Show', industry_list %></td>
+        <td><%= link_to 'Edit', edit_industry_list_path(industry_list) %></td>
+        <td><%= link_to 'Destroy', industry_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Industry List', new_industry_list_path %>

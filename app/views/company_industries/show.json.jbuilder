@@ -1,0 +1,1 @@
+json.partial! "company_industries/company_industry", company_industry: @company_industry
