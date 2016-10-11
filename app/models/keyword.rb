@@ -1,3 +1,3 @@
 class Keyword < ApplicationRecord
-	belongs_to :company_profile
+	belongs_to :companyprofile
 end

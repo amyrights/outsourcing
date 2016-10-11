@@ -1,3 +1,3 @@
 class Website < ApplicationRecord
-	belongs_to :compabny_profile
+	belongs_to :company_profile
 end

@@ -54,3 +54,7 @@ gem 'devise'
 
 #postgres
 gem 'pg' 
+
+gem 'awesome_print'
+
+gem 'bootstrap', '~> 4.0.0.alpha4'

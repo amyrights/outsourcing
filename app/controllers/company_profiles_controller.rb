@@ -19,6 +19,7 @@ class CompanyProfilesController < ApplicationController
 
   # GET /company_profiles/1/edit
   def edit
+    @company_profile.websites.build
   end
 
   # POST /company_profiles
@@ -69,6 +70,14 @@ class CompanyProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def company_profile_params
-      params.require(:company_profile).permit(:headquarters_country_code, :headquarters_state_code, :headquarters_city, :website, :twitter, :linkedin, :facebook, :summary, :year_founded, :classification, :index_acquired_by_public_company)
+      params.require(:company_profile).permit(:id, :cpid, :name, :classification, :note, 
+        :headquarters_country_code, :headquarters_state_code, :headquarters_city, :website, 
+        :twitter, :linkedin, :facebook, :summary, :narrative, :year_founded, :index_acquired_by_public_company, 
+        websites_attributes: [:id, :url],
+        contacts_attributes: [:id, :email, :title, :name, :linkedin, :twitter, :facebook, :google],
+        keywords_attributes: [:id, :name, :sort_order],
+        company_industries_attributes: [:id, :industry_list_id, :sort_order]
+
+        )
     end
 end

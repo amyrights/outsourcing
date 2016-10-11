@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Name:</strong>
+  <%= @company_profile.name %>
+</p>
+
+<p>
   <strong>Headquarters country code:</strong>
   <%= @company_profile.headquarters_country_code %>
 </p>
@@ -17,7 +22,10 @@
 
 <p>
   <strong>Website:</strong>
-  <%= @company_profile.website %>
+  <%= 
+      @company_profile.websites.first.url
+
+  %>
 </p>
 
 <p>
@@ -39,6 +47,12 @@
   <strong>Summary:</strong>
   <%= @company_profile.summary %>
 </p>
+
+<p>
+  <strong>Narrative:</strong>
+  <%= @company_profile.narrative %>
+</p>
+
 
 <%= link_to 'Edit', edit_company_profile_path(@company_profile) %> |
 <%= link_to 'Back', company_profiles_path %>

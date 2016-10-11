@@ -11,25 +11,52 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :headquarters_country_code %>
-    <%= f.text_field :headquarters_country_code %>
-  </div>
+    <div class="field">
+      <%= f.label :headquarters_country_code %>
+      <%= f.text_field :headquarters_country_code %>
+    </div>
+
+    <div class="field">
+      <%= f.label :headquarters_state_code %>
+      <%= f.text_field :headquarters_state_code %>
+    </div>
+
+    <div class="field">
+      <%= f.label :headquarters_city %>
+      <%= f.text_field :headquarters_city %>
+    </div>
 
   <div class="field">
-    <%= f.label :headquarters_state_code %>
-    <%= f.text_field :headquarters_state_code %>
+    <%= f.fields_for :websites do |website|%>
+    <div class="field">
+      <%= website.label :url %>
+      <%= website.text_field :url %>
+    </div>
+    <% end %>
   </div>
 
-  <div class="field">
-    <%= f.label :headquarters_city %>
-    <%= f.text_field :headquarters_city %>
-  </div>
+
 
   <div class="field">
-    <%= f.label :website %>
-    <%= f.text_field :website %>
+    <%= f.fields_for :contacts do |website|%>
+    <div class="field">
+      <%= website.label :email %>
+      <%= website.text_field :email %>
+    </div>
+
+    <div class="field">
+      <%= website.label :title %>
+      <%= website.text_field :title %>
+    </div>
+
+    <div class="field">
+      <%= website.label :name %>
+      <%= website.text_field :name %>
+    </div>
+
+    <% end %>
   </div>
+
 
   <div class="field">
     <%= f.label :twitter %>
@@ -49,6 +76,12 @@
   <div class="field">
     <%= f.label :summary %>
     <%= f.text_field :summary %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :narrative %>
+    <%= f.text_field :narrative %>
   </div>
 
   <div class="actions">
